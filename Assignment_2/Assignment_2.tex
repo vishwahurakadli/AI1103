@@ -1,4 +1,4 @@
- \documentclass[journal,12pt,twocolumn]{IEEEtran}
+  \documentclass[journal,12pt,twocolumn]{IEEEtran}
 
 \usepackage{setspace}
 \usepackage{gensymb}
@@ -138,16 +138,20 @@ https://github.com/vishwahurakadli/AI1103/blob/main/Assignment_2
 \begin{enumerate}
 \item Gate EC Q22:\\
 Let U and V be two independent zero mean Gaussian random variables of variances \(\frac{1}{4}\) and \(\frac{1}{9}\) respectively. The probability \(\Pr\brak{3V\geqslant2U}\) is.
-\begin{enumerate}
-\item \(\frac{4}{9}\)
-\item \(\frac{1}{2}\)
-\item \(\frac{2}{3}\)
-\item \(\frac{5}{9}\)
+\begin{enumerate}[]
+\begin{multicols}{4}
+\setlength\itemsep{0.1em}
+
+\item \(\frac{4}{9}\) \label{option A}
+\item \(\frac{1}{2}\) \label{option B}
+\item \(\frac{2}{3}\) \label{option C}
+\item \(\frac{5}{9}\) \label{option D}
+\end{multicols}
 \end{enumerate}
 \item Solution
 Given that random variables U and V are zero mean Gaussian random variables
 \begin{align}
-i.e., \bar{U}=\bar{V}=0 
+i.e., E\brak{U}=E\brak{V}=0 
 \end{align}
 also given that
 \begin{align}
@@ -170,17 +174,17 @@ Y = \frac{u}{\sigma_u}=2U\\
 \end{align}
 and we have
 \begin{align}
-\bar{X}=3\bar{V}=0\\
-\bar{Y}=2\bar{U}=0
+E\brak{X}=3E\brak{V}=0\\
+E\brak{Y}=2E\brak{U}=0
 \end{align}
 imply that random variable X-Y
 \begin{align}
-\overline{X-Y}=0
+E\brak{X-Y}=0
 \end{align}
 and variance of X and Y
 \begin{align}
-Var\brak{X}=\overline{9V^2}=1\\
-Var\brak{Y}=\overline{4U^2}=1
+Var\brak{X}=9Var\brak{V}=1\\
+Var\brak{Y}=4Var\brak{U}=1
 \end{align}
 imply that
 \begin{align}
