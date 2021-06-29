@@ -1,4 +1,4 @@
- \documentclass[journal,12pt,twocolumn]{IEEEtran}
+  \documentclass[journal,12pt,twocolumn]{IEEEtran}
 
 \usepackage{setspace}
 \usepackage{gensymb}
@@ -136,46 +136,58 @@ Download latex codes from
 https://github.com/vishwahurakadli/AI1103/tree/main/Assignment_4
 \end{lstlisting}
 \begin{enumerate}
-\item CSIR-UGC-NET(mathA june 2015) Q.110 :\\
-Suppose X has density
+\item CSIR-UGC-NET(mathA june 2015) \\
+Q.110: Suppose X has density
 \begin{align}
 f(x|\theta)= \frac{1}{\theta}e^{\frac{-x}{\theta}} , x>0,  \theta >0
 \end{align}
-Define Y as follows\\
+Define Y as follows
 \begin{align}
 Y = K if k \leqslant X < k+1, k= 0,1,2,... 
 \end{align}
-Then the distribution of Y is\\
-1.normal\\
-2.binomial\\
-3.poisson\\
-4.geometric
-\item Solution\\
-given thatx has density f then
+Then the distribution of Y is
+\begin{enumerate}
+\item Normal 
+\item Binomial 
+\item Poisson 
+\item Geometric
+\end{enumerate}
+\begin{lemma}
+PDF of X is 
 \begin{align}
-PDF(x)=\frac{e^{-x/\theta}}{{\theta}}
+\pr{X}&=\frac{1}{\theta} e^{-\frac{x}{\theta}}
 \end{align}
-therefore Q will be 
+\end{lemma}
+\begin{proof}
+The PDF of X will be given by
 \begin{align}
-Q_X(\alpha)=\int_{\alpha}^{\infty} \frac{e^{-x/\theta}}{{\theta}}\\
-Q_X(\alpha)=e^{-\alpha/\theta}
-\end{align}
-Now
+f(x|\theta)&=\frac{1}{\theta} e^{-x/\theta},x>0,\theta >0\\
+f(x)&=\frac{1}{\theta}e^{-\frac{x}{\theta}},  \text{since x and }\theta \text{are independent} \end{align}
+Hence lemma 0.1 is proved.
+\end{proof}
+\begin{lemma}
+pdf of Y is 
 \begin{align}
-Y = k, if k \leqslant X < k+1
+p\brak{Y=k}&=e^{-\frac{k}{\theta}} \brak{1-e^{-\frac{k}{\theta}}}
 \end{align}
-so considering Q
+is in the form of geometric distribution.
+\end{lemma}
+\begin{proof}
+given that Y=k if $k \leqslant X <k+1$ k=0,1,2,...
 \begin{align}
-\Pr(Y=K) = \Pr(k \leqslant X < k+1)\\
-=Q_{X}(k) - Q_{X}(k+1)\\
-=e^{-k/\theta}-e^{-(K+1)/\theta}\\
-=a*e^{-k} \text{where a is constant}
+p(Y=k)&=\int_k^{k+1} p(X=x) dx\\
+&=\int_k^{k+1} \frac{1}{\theta} e^{-\frac{x}{\theta}} dx \nonumber \\
+&=e^{-\frac{k}{\theta}} \brak{1-e^{-\frac{k}{\theta}}}
 \end{align}
-geometric distribution is given by 
+\end{proof}
+\begin{lemma}
+When the pdf of X is in the form of 
 \begin{align}
-\Pr(X=K)= (1-p)^{k-1}p
-\end{align}
-therefore obtained y distribution is geometric\\ 
+p(X=k)&=(1-p)^{k} p, \text{ where } (k=0,1,2,...)
+\end{align} 
+Then the distribution is said to be in the form of geometric distribution. 
+\end{lemma}\\
+Using Lemma 0.2 and Lemma 0.3, distribution of Y will be geometric.\\
 So the correct option is \brak{4}
 \end{enumerate}
 \end{document}
