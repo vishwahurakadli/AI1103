@@ -1,4 +1,4 @@
-  \documentclass[journal,12pt,twocolumn]{IEEEtran}
+ \documentclass[journal,12pt,twocolumn]{IEEEtran}
 
 \usepackage{setspace}
 \usepackage{gensymb}
@@ -135,16 +135,12 @@ Download latex codes from
 \begin{lstlisting}
 https://github.com/vishwahurakadli/AI1103/tree/main/Assignment_4
 \end{lstlisting}
-\begin{enumerate}
-\item CSIR-UGC-NET(mathA june 2015) \\
+\section{Question}
+CSIR-UGC-NET(mathA june 2015) \\
 Q.110: Suppose X has density
-\begin{align}
-f(x|\theta)= \frac{1}{\theta}e^{\frac{-x}{\theta}} , x>0,  \theta >0
-\end{align}
+$f\brak{\frac{x}{\theta}}=\frac{1}{\theta} e^{-x/\theta},x>0$, $\theta >0$ 
 Define Y as follows
-\begin{align}
-Y = K if k \leqslant X < k+1, k= 0,1,2,... 
-\end{align}
+Y = K $k \leqslant X < k+1$, k= 0,1,2,... 
 Then the distribution of Y is
 \begin{enumerate}
 \item Normal 
@@ -152,6 +148,7 @@ Then the distribution of Y is
 \item Poisson 
 \item Geometric
 \end{enumerate}
+\section{Solution}
 \begin{lemma}
 PDF of X is 
 \begin{align}
@@ -163,7 +160,7 @@ The PDF of X will be given by
 \begin{align}
 f(x|\theta)&=\frac{1}{\theta} e^{-x/\theta},x>0,\theta >0\\
 f(x)&=\frac{1}{\theta}e^{-\frac{x}{\theta}},  \text{since x and }\theta \text{are independent} \end{align}
-Hence lemma 0.1 is proved.
+Hence lemma 2.1 is proved.
 \end{proof}
 \begin{lemma}
 pdf of Y is 
@@ -183,11 +180,22 @@ p(Y=k)&=\int_k^{k+1} p(X=x) dx\\
 \begin{lemma}
 When the pdf of X is in the form of 
 \begin{align}
-p(X=k)&=(1-p)^{k} p, \text{ where } (k=0,1,2,...)
+p(X=k)&=(1-p)^{k}p, \text{ where } (k=0,1,2,...)
 \end{align} 
-Then the distribution is said to be in the form of geometric distribution. 
-\end{lemma}\\
-Using Lemma 0.2 and Lemma 0.3, distribution of Y will be geometric.\\
+Then the distribution is said to be in the form of geometric distribution.
+\end{lemma}
+\begin{proof}
+the expected value is given by
+\begin{align}
+E(X)= p(x=0)+p(x=1)2+p(x=3)3+...\\
+=p+(1-p)^{2}p2+(1-p)^{3}p3+...\nonumber\\
+\end{align}
+solving these equations
+\begin{align}
+E(X)=\frac{1}{p}
+\end{align}
+shows that p(X=k) is in the form of geometric distribution.
+\end{proof}
+Using Lemma 2.2 and Lemma 2.3, distribution of Y will be geometric.
 So the correct option is \brak{4}
-\end{enumerate}
 \end{document}
