@@ -140,7 +140,7 @@ CSIR-UGC-NET(mathA june 2015) \\
 Q.110: Suppose X has density
 $f\brak{\frac{x}{\theta}}=\frac{1}{\theta} e^{-x/\theta},x>0$, $\theta >0$ 
 Define Y as follows
-Y = K $k \leqslant X < k+1$, k= 0,1,2,... 
+$Y = K$ $k \leqslant X < k+1$, k= 0,1,2,$cdots$\\
 Then the distribution of Y is
 \begin{enumerate}
 \item Normal 
@@ -150,27 +150,29 @@ Then the distribution of Y is
 \end{enumerate}
 \section{Solution}
 \begin{lemma}
-PDF of X is 
+PDF of $X$ is 
 \begin{align}
 \pr{X}&=\frac{1}{\theta} e^{-\frac{x}{\theta}}
 \end{align}
 \end{lemma}
 \begin{proof}
-The PDF of X will be given by
+The PDF of $X$ will be given by
 \begin{align}
 f(x|\theta)&=\frac{1}{\theta} e^{-x/\theta},x>0,\theta >0\\
-f(x)&=\frac{1}{\theta}e^{-\frac{x}{\theta}},  \text{since x and }\theta \text{are independent} \end{align}
+f(x)&=\frac{1}{\theta}e^{-\frac{x}{\theta}} 
+\end{align}
+since x and $\theta$ are independent 
 Hence lemma 2.1 is proved.
 \end{proof}
 \begin{lemma}
-pdf of Y is 
+pdf of $Y$ is 
 \begin{align}
 p\brak{Y=k}&=e^{-\frac{k}{\theta}} \brak{1-e^{-\frac{k}{\theta}}}
 \end{align}
 is in the form of geometric distribution.
 \end{lemma}
 \begin{proof}
-given that Y=k if $k \leqslant X <k+1$ k=0,1,2,...
+given that $Y=k$ if $k \leqslant X <k+1$ k=0,1,2,...
 \begin{align}
 p(Y=k)&=\int_k^{k+1} p(X=x) dx\\
 &=\int_k^{k+1} \frac{1}{\theta} e^{-\frac{x}{\theta}} dx \nonumber \\
@@ -178,10 +180,11 @@ p(Y=k)&=\int_k^{k+1} p(X=x) dx\\
 \end{align}
 \end{proof}
 \begin{lemma}
-When the pdf of X is in the form of 
+When the pdf of $X$ is in the form of 
 \begin{align}
-p(X=k)&=(1-p)^{k}p, \text{ where } (k=0,1,2,...)
-\end{align} 
+p(X=k)=(1-p)^{k}p, 
+\end{align}
+where  $(k=0,1,2,\cdots)$\\
 Then the distribution is said to be in the form of geometric distribution.
 \end{lemma}
 \begin{proof}
@@ -194,8 +197,8 @@ solving these equations
 \begin{align}
 E(X)=\frac{1}{p}
 \end{align}
-shows that p(X=k) is in the form of geometric distribution.
+shows that $p(X=k)$ is in the form of geometric distribution.
 \end{proof}
-Using Lemma 2.2 and Lemma 2.3, distribution of Y will be geometric.
+Using Lemma 2.2 and Lemma 2.3, distribution of $Y$ will be geometric.
 So the correct option is \brak{4}
 \end{document}
